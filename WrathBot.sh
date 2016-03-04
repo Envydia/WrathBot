@@ -1,6 +1,6 @@
 #!/bin/bash
 
-key=`cat chankey`
+source ../secrets
 
 function send {
     echo "-> $1"
@@ -19,9 +19,9 @@ do
         send "JOIN #EnvyTest"
         send "JOIN #tabletop"
         send "JOIN #mtg"
-        send "JOIN #necromancers $key"
-        send "JOIN #robots $key"
-        send "JOIN #bots $key"
+        send "JOIN #necromancers $cat_chankey"
+        send "JOIN #robots $cat_chankey"
+        send "JOIN #bots $cat_chankey"
         started="yes"
     fi
 
